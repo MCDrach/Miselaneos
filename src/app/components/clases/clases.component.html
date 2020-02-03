@@ -3,3 +3,11 @@
 </div>
 <button class="btn btn-primary" (click)="alerta ='alert-info'">Info</button>
 <button class="btn btn-primary" (click)="alerta ='alert-success'">Succes</button>
+
+<h3 [ngClass]="{'text-danger': propiedades.danger, 'text-info': !propiedades.danger}">
+    Hola mundo
+</h3>
+
+<button (click)="propiedades.danger = !propiedades.danger" type="button" name="button" class="btn " [ngClass]="{'btn-danger': propiedades.danger, 'btn-info': !propiedades.danger}"> 
+    Cambiar 
+</button>
